@@ -1,5 +1,6 @@
 import type React from "react";
 import { useEffect, useState } from "react";
+import LogoImg from "../../assets/perfil_image.png";
 import {
 	Blob,
 	ButtonContainer,
@@ -79,11 +80,7 @@ const Home: React.FC = () => {
 						transform="translate(100 100)"
 					/>
 				</Blob>
-				<ProfileImage
-					src="/src/assets/perfil_image.png"
-					alt="João Batista"
-					$isLoaded={isLoaded}
-				/>
+				<ProfileImage src={LogoImg} alt="Foto Perfil" $isLoaded={isLoaded} />
 			</HeroVisual>
 		</HeroSection>
 	);

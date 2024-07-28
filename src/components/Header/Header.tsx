@@ -1,7 +1,10 @@
 import type React from "react";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 import { IoMdContacts } from "react-icons/io";
+import { IoConstruct } from "react-icons/io5";
+import { MdPermContactCalendar } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { useTheme } from "../../contexts/ThemeContext";
 import {
@@ -46,22 +49,25 @@ const Header: React.FC = () => {
 					<NavList>
 						<NavItem>
 							<Link to="/" onClick={toggleMenu}>
+								<FaHome style={{ margin: "-1px 3px" }} />
 								Início
 							</Link>
 						</NavItem>
 						<NavItem>
 							<Link to="/about" onClick={toggleMenu}>
+								<MdPermContactCalendar style={{ margin: "-4px 3px" }} />
 								Sobre
 							</Link>
 						</NavItem>
 						<NavItem>
 							<Link to="/projects" onClick={toggleMenu}>
+								<IoConstruct style={{ margin: "-1px 3px" }} />
 								Projetos
 							</Link>
 						</NavItem>
 						<NavItem>
 							<Link to="/contact" onClick={toggleMenu}>
-								<IoMdContacts style={{ margin: "3px 2px" }} />
+								<IoMdContacts style={{ margin: "-1px 2px" }} />
 								Contato
 							</Link>
 						</NavItem>
@@ -70,25 +76,30 @@ const Header: React.FC = () => {
 			) : (
 				<NavList style={{ display: isMobile ? "none" : "flex" }}>
 					<NavItem>
-						<Link to="/">Início</Link>
+						<Link to="/">
+							<FaHome style={{ margin: "-1px 3px" }} />
+							Início
+						</Link>
 					</NavItem>
 					<NavItem>
-						<Link to="/about">Sobre</Link>
+						<Link to="/about">
+							<MdPermContactCalendar style={{ margin: "-2px 3px" }} />
+							Sobre
+						</Link>
 					</NavItem>
 					<NavItem>
-						<Link to="/projects">Projetos</Link>
+						<Link to="/projects">
+							<IoConstruct style={{ margin: "-1px 3px" }} />
+							Projetos
+						</Link>
 					</NavItem>
 					<NavItem>
 						<Link to="/contact">
-							<IoMdContacts style={{ margin: "3px 2px" }} />
+							<IoMdContacts style={{ margin: "-1px 3px" }} />
 							Contato
 						</Link>
 					</NavItem>
 				</NavList>
-			)}
-
-			{!isMobile && (
-				<div className="desktop-only-content">Conteúdo apenas para desktop</div>
 			)}
 		</HeaderContainer>
 	);

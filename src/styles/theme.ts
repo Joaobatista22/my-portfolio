@@ -4,7 +4,7 @@ export const lightTheme: DefaultTheme = {
 	bgColor: "#f2f2fc",
 	textColor: "#363537",
 	primaryColor: "#1C08FE",
-	secondaryColor: "#000",
+	secondaryColor: "#fff",
 	bthov: "#4C08FE",
 	shadowColor: "rgba(0, 0, 0, 0.1)",
 };
