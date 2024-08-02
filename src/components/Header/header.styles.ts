@@ -35,7 +35,7 @@ export const NavItem = styled.li`
     font-weight: bold;
 
     &:hover {
-      color: #ff9f43;
+      color: ${(props) => props.theme.primaryColor};
     }
   }
   @media (max-width: 768px) {

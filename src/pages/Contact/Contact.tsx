@@ -15,7 +15,7 @@ import {
 	Title,
 } from "./Contact.styles";
 
-const Contact: React.FC = () => {
+const Projects: React.FC = () => {
 	const { isLoaded } = useIsLoaded();
 
 	return (
@@ -78,4 +78,4 @@ const Contact: React.FC = () => {
 	);
 };
 
-export default Contact;
+export default Projects;

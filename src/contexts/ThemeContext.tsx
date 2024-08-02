@@ -19,7 +19,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
 	const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("light");
 
-	const theme = currentTheme === "light" ? lightTheme : darkTheme;
+	const theme = currentTheme === "dark" ? lightTheme : darkTheme;
 
 	const toggleTheme = () => {
 		setCurrentTheme(currentTheme === "light" ? "dark" : "light");

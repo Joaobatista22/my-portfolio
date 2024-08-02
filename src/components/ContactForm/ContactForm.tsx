@@ -5,6 +5,26 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Button, Form, Input, TextArea } from "./ContactForm.styles";
 
+const isValidEmail = (email: string): boolean => {
+	// Expressão regular mais robusta para validação de email
+	const emailRegex =
+		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+	if (!emailRegex.test(email)) {
+		return false;
+	}
+
+	// Verificar domínio do email
+	const [, domain] = email.split("@");
+	const validDomains = ["gmail.com", "hotmail.com", "yahoo.com", "outlook.com"]; // Adicione outros domínios conforme necessário
+
+	if (!validDomains.includes(domain.toLowerCase())) {
+		return false;
+	}
+
+	return true;
+};
+
 const ContactForm: React.FC = () => {
 	const [formData, setFormData] = useState({
 		name: "",
@@ -12,6 +32,7 @@ const ContactForm: React.FC = () => {
 		assunto: "",
 		message: "",
 	});
+	const [isSending, setIsSending] = useState(false);
 
 	const handleChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -25,34 +46,43 @@ const ContactForm: React.FC = () => {
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+		console.log("Formulário submetido");
+
+		if (!isValidEmail(formData.email)) {
+			toast.error("Por favor, insira um email válido.");
+			return;
+		}
+
+		setIsSending(true);
 
 		try {
-			const result = await toast.promise(
-				emailjs.sendForm(
-					"service_zyb642p",
-					"template_jedfg9g",
-					e.currentTarget,
-					"tMYWyOEtaht5vC1ju",
-				),
-				{
-					pending: "Enviando mensagem...",
-					success: "Mensagem enviada com sucesso!",
-					error:
-						"Ocorreu um erro ao enviar a mensagem. Tente novamente mais tarde.",
-				},
+			console.log("Iniciando envio de email");
+			const result = await emailjs.sendForm(
+				"service_zyb642p",
+				"template_jedfg9g",
+				e.currentTarget as HTMLFormElement,
+				"tMYWyOEtaht5vC1ju",
 			);
 
-			console.log(result.text);
-			// Limpar o formulário após o envio bem-sucedido
-			setFormData({ name: "", email: "", assunto: "", message: "" });
+			console.log("Resposta do EmailJS:", result);
+
+			if (result.text === "OK") {
+				toast.success("Mensagem enviada com sucesso!");
+				setFormData({ name: "", email: "", assunto: "", message: "" });
+			} else {
+				throw new Error("Resposta inesperada do servidor");
+			}
 		} catch (error) {
-			console.error("Erro ao enviar e-mail:", error);
+			console.error("Erro detalhado ao enviar e-mail:", error);
+			toast.error(`Erro ao enviar mensagem: ${(error as Error).message}`);
+		} finally {
+			setIsSending(false);
 		}
 	};
 
 	return (
 		<>
-			<ToastContainer autoClose={1000} />
+			<ToastContainer autoClose={3000} />
 			<Form onSubmit={handleSubmit}>
 				<div>
 					<Input
@@ -90,7 +120,9 @@ const ContactForm: React.FC = () => {
 					onChange={handleChange}
 					required
 				/>
-				<Button type="submit">Enviar</Button>
+				<Button type="submit" disabled={isSending}>
+					{isSending ? "Enviando..." : "Enviar"}
+				</Button>
 			</Form>
 		</>
 	);

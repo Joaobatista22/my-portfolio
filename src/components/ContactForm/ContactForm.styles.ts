@@ -19,6 +19,9 @@ padding: 0.5rem;
 border: 1px solid #ccc;
 border-radius: 1rem;
 width: 100%;
+@media (max-width: 768px) {
+  font-size: 15px;
+}
 `;
 
 export const TextArea = styled.textarea`
