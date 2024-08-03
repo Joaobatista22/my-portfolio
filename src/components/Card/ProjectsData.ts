@@ -48,8 +48,9 @@ export const projects: Project[] = [
 		image: GithubFinder,
 		description:
 			"Projeto em React com TypeScript consumindo api do github para encontrar usuários e retornar dados, usei o react-router-dom para criar um novo path onde listar os melhores repositórios do usuário.",
-		github: "https://github.com/Joaobatista22/Page_Car",
-		deploy: "https://joaobatista22.github.io/Page_Car/",
+		github: "https://github.com/Joaobatista22/github_finder",
+		deploy:
+			"https://github-finder-mi7noflz7-joaobatista22s-projects.vercel.app/",
 		technologies: ["Vite", "React", "TypeScript", "Styled"],
 	},
 	{

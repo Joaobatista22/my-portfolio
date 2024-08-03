@@ -68,8 +68,8 @@ const Home: React.FC = () => {
 					para criar experiências de usuário excepcionais.
 				</Description>
 				<ButtonContainer>
-					<PrimaryButton href="/contacts">Say hello</PrimaryButton>
-					<SecondaryButton href="#projects">See my work</SecondaryButton>
+					<PrimaryButton href="/contact">Say hello</PrimaryButton>
+					<SecondaryButton href="/projects">See my work</SecondaryButton>
 				</ButtonContainer>
 			</HeroContent>
 			<HeroVisual>

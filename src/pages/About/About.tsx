@@ -21,25 +21,35 @@ import {
 const About: React.FC = () => {
 	const { isLoaded } = useIsLoaded();
 
+	const handleDownloadCV = (e: React.MouseEvent<HTMLAnchorElement>) => {
+		e.preventDefault();
+		const link = document.createElement("a");
+		link.href =
+			"https://drive.google.com/uc?export=download&id=1Euqh55q_9IRwSPP1PsxmSvsUGNbRgjkx";
+		link.download = "CV_JoaoBatista.pdf";
+		document.body.appendChild(link);
+		link.click();
+		document.body.removeChild(link);
+	};
+
 	return (
 		<ContactContainer $isLoaded={isLoaded}>
 			<ContactHeader>
 				<ContactTitle>Sobre</ContactTitle>
 			</ContactHeader>
 			<PageContainer>
-				{" "}
 				<Name>
 					Me chamo João Batista e sou <span>Desenvolvedor Web</span>
 				</Name>
 				<Description>
-					Sou um Desenvolvedor. Atualmente estou em transição de carreira da
-					área de logística e varejo para a programação. Fascinado pela
-					tecnologia e suas transformações, decidi buscar novas oportunidades na
-					área. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas
-					e constantemente estou explorando novas ferramentas e linguagens. Sou
-					proativo, adaptável e estou ansioso para enfrentar novos desafios e
-					contribuir para soluções inovadoras. Além dos estudos, tenho me
-					dedicado a projetos pessoais.
+					Atualmente estou em transição de carreira da área de logística e
+					varejo para a programação. Fascinado pela tecnologia e suas
+					transformações, decidi buscar novas oportunidades na área. Atualmente,
+					estou cursando Análise e Desenvolvimento de Sistemas e constantemente
+					estou explorando novas ferramentas e linguagens. Sou proativo,
+					adaptável e estou ansioso para enfrentar novos desafios e contribuir
+					para soluções inovadoras. Além dos estudos, tenho me dedicado a
+					projetos pessoais.
 				</Description>
 				<ContactInfo>
 					<ContactItem>Cidade : São Paulo</ContactItem>
@@ -69,13 +79,27 @@ const About: React.FC = () => {
 						GitHub : Joaobatista22
 					</ContactItem>
 				</ContactInfo>
-				<div>
-					<Button>Baixar CV</Button>
-					<Button>Contate-me</Button>
+				<div style={{ margin: "2rem 0" }}>
+					<Button href="#" onClick={handleDownloadCV}>
+						Baixar CV
+					</Button>
+					<Button href="/contact">Contate-me</Button>
 				</div>
 				<SkillIcons>
-					<SkillIcon src="/path/to/html-icon.png" alt="HTML" />
-					<SkillIcon src="/path/to/css-icon.png" alt="CSS" />
+					<SkillIcon src="src/assets/icons/html-5.png" alt="HTML" />
+					<SkillIcon src="src/assets/icons/css-3.png" alt="CSS" />
+					<SkillIcon src="src/assets/icons/js.png" alt="JavaScript" />
+					<SkillIcon src="src/assets/icons/physics.png" alt="React" />
+					<SkillIcon src="src/assets/icons/typescript.png" alt="Typescript" />
+					<SkillIcon src="src/assets/icons/nodejs.jpg" alt="Nodejs" />
+					<SkillIcon src="src/assets/icons/vite.png" alt="Vite" />
+					<SkillIcon
+						src="src/assets/icons/styled-components.jpg"
+						alt="styled-components"
+					/>
+					<SkillIcon src="src/assets/icons/PostreSQL.png" alt="PostreSQL" />
+					<SkillIcon src="src/assets/icons/mongodb.png" alt="mongodb" />
+					<SkillIcon src="src/assets/icons/docker.png" alt="docker" />
 				</SkillIcons>
 				<TimelineSection>
 					<TimelineColumn>

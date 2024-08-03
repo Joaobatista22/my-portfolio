@@ -16,7 +16,7 @@ export const ContactContainer = styled.div<{ $isLoaded: boolean }>`
   padding: 20px;
   background-color: ${(props) => props.theme.bgColor};
   color: ${(props) => props.theme.textColor};
-  border: 2px solid rebeccapurple;
+
 `;
 export const PageContainer = styled.div`
   max-width: 1400px;
@@ -61,21 +61,26 @@ export const ContactItem = styled.a`
 export const SkillIcons = styled.div`
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  border: 2px solid #4ccc;
+  gap: 1rem;
+  justify-content: center;
 `;
 
 export const SkillIcon = styled.img`
-  width: 40px;
-  height: 40px;
+  width: 3rem;
+  height: 3rem;
+
+  &:hover {
+    transform: translateY(-5px); 
+
+  }
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   background-color: ${(props) => props.theme.primaryColor};
   color: white;
   border: none;
   padding: 10px 20px;
-margin: 10px 10px 10px 0;
+  margin: 10px 10px 10px 0;
   cursor: pointer;
   border-radius: 5px;
 `;
@@ -85,6 +90,9 @@ export const TimelineSection = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 40px;
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
 `;
 export const TimelineColumn = styled.div`
@@ -99,6 +107,9 @@ export const TimelineColumn = styled.div`
     width: 2px;
     background-color: ${(props) => props.theme.primaryColor};
     box-shadow: 0 1px 15px ${(props) => props.theme.bthov};
+    @media (max-width: 768px) {
+      display: none;
+  }
   }
 `;
 
@@ -121,7 +132,7 @@ export const TimelineItem = styled.div`
 `;
 
 export const TimelineTitle = styled.h3`
-   color:  ${(props) => props.theme.clinColor};
+  color:  ${(props) => props.theme.clinColor};
   margin-bottom: 5px;
 `;
 
