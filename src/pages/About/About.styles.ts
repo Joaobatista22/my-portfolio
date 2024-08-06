@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
 export const shine = keyframes`
@@ -75,7 +76,7 @@ export const SkillIcon = styled.img`
   }
 `;
 
-export const Button = styled.a`
+export const Button = styled(Link)`
   background-color: ${(props) => props.theme.primaryColor};
   color: white;
   border: none;

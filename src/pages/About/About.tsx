@@ -1,3 +1,5 @@
+import type React from "react";
+import { techIcons } from "../../components/Card/techIcons";
 import { useIsLoaded } from "../../contexts/IsLoadedContext";
 import { ContactHeader, ContactTitle } from "../Contact/Contact.styles";
 import {
@@ -80,26 +82,23 @@ const About: React.FC = () => {
 					</ContactItem>
 				</ContactInfo>
 				<div style={{ margin: "2rem 0" }}>
-					<Button href="#" onClick={handleDownloadCV}>
+					<Button to="#" onClick={handleDownloadCV}>
 						Baixar CV
 					</Button>
-					<Button href="/contact">Contate-me</Button>
+					<Button to="/contact">Contate-me</Button>
 				</div>
 				<SkillIcons>
-					<SkillIcon src="src/assets/icons/html-5.png" alt="HTML" />
-					<SkillIcon src="src/assets/icons/css-3.png" alt="CSS" />
-					<SkillIcon src="src/assets/icons/js.png" alt="JavaScript" />
-					<SkillIcon src="src/assets/icons/physics.png" alt="React" />
-					<SkillIcon src="src/assets/icons/typescript.png" alt="Typescript" />
-					<SkillIcon src="src/assets/icons/nodejs.jpg" alt="Nodejs" />
-					<SkillIcon src="src/assets/icons/vite.png" alt="Vite" />
-					<SkillIcon
-						src="src/assets/icons/styled-components.jpg"
-						alt="styled-components"
-					/>
-					<SkillIcon src="src/assets/icons/PostreSQL.png" alt="PostreSQL" />
-					<SkillIcon src="src/assets/icons/mongodb.png" alt="mongodb" />
-					<SkillIcon src="src/assets/icons/docker.png" alt="docker" />
+					<SkillIcon src={techIcons.Html} alt="HTML" />
+					<SkillIcon src={techIcons.Css} alt="CSS" />
+					<SkillIcon src={techIcons.JavaScript} alt="JavaScript" />
+					<SkillIcon src={techIcons.React} alt="React" />
+					<SkillIcon src={techIcons.TypeScript} alt="TypeScript" />
+					<SkillIcon src={techIcons.Node} alt="Node.js" />
+					<SkillIcon src={techIcons.Vite} alt="Vite" />
+					<SkillIcon src={techIcons.Styled} alt="Styled Components" />
+					<SkillIcon src={techIcons.PostreSQL} alt="PostgreSQL" />
+					<SkillIcon src={techIcons.Backend} alt="Backend" />
+					<SkillIcon src={techIcons.Bootstrap} alt="Bootstrap" />
 				</SkillIcons>
 				<TimelineSection>
 					<TimelineColumn>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled, { keyframes } from "styled-components";
 
 type IsLoadedProps = {
@@ -141,13 +142,39 @@ export const Button = styled.a`
   }
 `;
 
-export const PrimaryButton = styled(Button)`
+export const PrimaryButton = styled(Link)`
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-radius: 21px;
+  font-weight: bold;
+  justify-content: center;
   background-color: ${(props) => props.theme.primaryColor};
   color: ${(props) => props.theme.secondaryColor};
+  border: 2px solid ${(props) => props.theme.primaryColor};
+  filter: drop-shadow(0 2px 5px ${(props) => props.theme.primaryColor});
+  &:hover {
+    transform: translateY(-3px);
+    }
+
 `;
 
-export const SecondaryButton = styled(Button)`
+export const SecondaryButton = styled(Link)`
   background-color: ${(props) => props.theme.secondaryColor};
   color: ${(props) => props.theme.primaryColor};
   border: 2px solid ${(props) => props.theme.primaryColor};
+  filter: drop-shadow(0 2px 5px ${(props) => props.theme.primaryColor});
+  width: 8rem;
+  height: 3rem;
+  display: flex;
+  align-content: center;
+  align-items: center;
+  border-radius: 21px;
+  font-weight: bold;
+  justify-content: center;
+  &:hover {
+    transform: translateY(-3px);
+    }
 `;
