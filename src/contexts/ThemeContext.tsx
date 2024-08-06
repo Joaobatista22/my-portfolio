@@ -10,6 +10,7 @@ import { darkTheme, lightTheme } from "../styles/theme";
 type ThemeContextType = {
 	theme: DefaultTheme;
 	toggleTheme: () => void;
+	isDarkTheme: boolean; // Adiciona a propriedade isDarkTheme
 };
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
@@ -19,14 +20,15 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
 	const [currentTheme, setCurrentTheme] = useState<"light" | "dark">("light");
 
-	const theme = currentTheme === "dark" ? lightTheme : darkTheme;
+	const theme = currentTheme === "dark" ? darkTheme : lightTheme;
+	const isDarkTheme = currentTheme === "dark"; // Define isDarkTheme com base no estado atual
 
 	const toggleTheme = () => {
 		setCurrentTheme(currentTheme === "light" ? "dark" : "light");
 	};
 
 	return (
-		<ThemeContext.Provider value={{ theme, toggleTheme }}>
+		<ThemeContext.Provider value={{ theme, toggleTheme, isDarkTheme }}>
 			<StyledThemeProvider theme={theme}>
 				<GlobalStyle />
 				{children}

@@ -1,15 +1,12 @@
 import type React from "react";
-import { WiSolarEclipse } from "react-icons/wi";
 import { useTheme } from "../../contexts/ThemeContext";
 import { ThemeToggle } from "./Button.styles";
 
 const ThemeToggleButton: React.FC = () => {
-	const { toggleTheme } = useTheme();
+	const { toggleTheme, isDarkTheme } = useTheme();
 
 	return (
-		<ThemeToggle onClick={toggleTheme}>
-			<WiSolarEclipse />
-		</ThemeToggle>
+		<ThemeToggle onClick={toggleTheme}>{isDarkTheme ? "🌙" : "☀️"}</ThemeToggle>
 	);
 };
 

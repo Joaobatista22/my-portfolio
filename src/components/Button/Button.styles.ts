@@ -1,33 +1,18 @@
 import styled from "styled-components";
 
 export const ThemeToggle = styled.button`
-
-  color: ${({ theme }) => theme.text};
-  font-size: 2.5rem;
+  background: none;
+  border: none;
   cursor: pointer;
-  padding: 0.5rem;
-  position: fixed;
-  top: 1rem;
+  font-size: 40px;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
   right: 1rem;
-  z-index: 1000;
-  border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    background: red;
-    border: none;
-    font-size: 2.5rem;
-    cursor: pointer;
-    padding: 0.5rem;
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 1000;
+  top: 2rem;
+  animation: aTwsK 3s ease-in-out infinite;
+  filter: drop-shadow(1px 1px 2px ${(props) => props.theme.primaryColor});
 
   &:hover {
-    opacity: 0.8;
-  }
-  @media (max-width: 768px) {
-    top: 5rem;
-    font-size: 1.7rem;
+    transform: scale(1.1);
   }
 `;
