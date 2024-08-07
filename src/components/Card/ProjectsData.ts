@@ -9,6 +9,7 @@ import Backend from "../../assets/imgproject/backend.png";
 import Dice from "../../assets/imgproject/dice.png";
 import Gta from "../../assets/imgproject/gta.png";
 import Netflix from "../../assets/imgproject/netflix.png";
+import Portfolio from "../../assets/imgproject/portfolio.png";
 import RsSuportes from "../../assets/imgproject/rssuporte.png";
 
 export interface Project {
@@ -30,7 +31,16 @@ export const projects: Project[] = [
 			"Projeto completo FullStack, contando com tela de login, registrar, página principal, página categorias, carrinho. contando com tela de admin onde pode ser adicionado produtos, categorias, editar, deletar e atualizar status dos pedidos. ",
 		github: "https://github.com/Joaobatista22/code-burger-interface",
 		deploy: "https://code-burger-interface-five.vercel.app/login",
-		technologies: ["React", "Node", "PostreSQL", "Styled", "JavaScript"],
+		technologies: [
+			"React",
+			"Node",
+			"PostreSQL",
+			"Styled",
+			"JavaScript",
+			"Express",
+			"Restfull",
+			"Git",
+		],
 	},
 	{
 		id: 2,
@@ -51,7 +61,15 @@ export const projects: Project[] = [
 		github: "https://github.com/Joaobatista22/github_finder",
 		deploy:
 			"https://github-finder-mi7noflz7-joaobatista22s-projects.vercel.app/",
-		technologies: ["Vite", "React", "TypeScript", "Styled"],
+		technologies: [
+			"Vite",
+			"React",
+			"TypeScript",
+			"Styled",
+			"Express",
+			"Restfull",
+			"Git",
+		],
 	},
 	{
 		id: 4,
@@ -60,7 +78,7 @@ export const projects: Project[] = [
 		description: "Página inspirada no MMORPG Tibia.",
 		github: "https://github.com/Joaobatista22/Tibia_React_Vite",
 		deploy: "https://tibia-react-vite.vercel.app/",
-		technologies: ["Vite", "React", "JavaScript", "Styled"],
+		technologies: ["Vite", "React", "JavaScript", "Styled", "Express"],
 	},
 	{
 		id: 5,
@@ -70,7 +88,7 @@ export const projects: Project[] = [
 			"O objetivo principal dessa aplicação é proporcionar aos usuários a capacidade de realizar conversões de valores de moedas de diferentes países.",
 		github: "https://github.com/Joaobatista22/ProgetoMoney",
 		deploy: "https://joaobatista22.github.io/ProgetoMoney/",
-		technologies: ["Html", "Css", "JavaScript"],
+		technologies: ["Html", "Css", "JavaScript", "Express"],
 	},
 	{
 		id: 6,
@@ -119,13 +137,13 @@ export const projects: Project[] = [
 			"A arquitetura deste projeto backend é modular e organizada. Contendo controllers, middlewares, models, e esquemas de dados (schemas). A pasta config contém configurações de autenticação (auth.js), banco de dados, e upload de arquivos. A pasta database possui arquivos de configuração e inicialização do banco de dados.",
 		github: "https://github.com/Joaobatista22/code-burger-node",
 		deploy: "https://github.com/Joaobatista22",
-		technologies: ["Node", "Backend", "JavaScript"],
+		technologies: ["Node", "Backend", "JavaScript", "Git"],
 	},
 	{
 		id: 11,
-		title: "Grand Thinft Auto",
+		title: "Grand Theft Auto",
 		image: Gta,
-		description: "LandingPage do Grand Thinft Auto.",
+		description: "LandingPage do Grand Theft Auto.",
 		github: "https://github.com/Joaobatista22/Projeto-GTA",
 		deploy: "https://joaobatista22.github.io/Projeto-GTA/",
 		technologies: ["Html", "Css", "JavaScript"],
@@ -138,5 +156,22 @@ export const projects: Project[] = [
 		github: "https://github.com/Joaobatista22/projeto-netflix",
 		deploy: "https://joaobatista22.github.io/projeto-netflix/",
 		technologies: ["Html", "Css", "JavaScript"],
+	},
+	{
+		id: 13,
+		title: "My Portfólio",
+		image: Portfolio,
+		description:
+			"Projeto criado em React+Vite com TypeScript, portfólio com path de contato, tela inicial, sobre e projetos.",
+		github: "https://github.com/Joaobatista22/my-portfolio",
+		deploy: "https://portfolio-joabatista.netlify.app/",
+		technologies: [
+			"Vite",
+			"React",
+			"TypeScript",
+			"JavaScript",
+			"Styled",
+			"Git",
+		],
 	},
 ];

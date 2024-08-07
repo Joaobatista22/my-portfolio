@@ -15,4 +15,8 @@ export const ThemeToggle = styled.button`
   &:hover {
     transform: scale(1.1);
   }
+  @media (max-width: 768px) {
+    font-size: 32px;
+    top: 4rem;
+  }
 `;

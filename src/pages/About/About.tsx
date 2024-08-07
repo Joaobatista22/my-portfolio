@@ -99,6 +99,9 @@ const About: React.FC = () => {
 					<SkillIcon src={techIcons.PostreSQL} alt="PostgreSQL" />
 					<SkillIcon src={techIcons.Backend} alt="Backend" />
 					<SkillIcon src={techIcons.Bootstrap} alt="Bootstrap" />
+					<SkillIcon src={techIcons.Git} alt="Git" />
+					<SkillIcon src={techIcons.Restfull} alt="Restfull" />
+					<SkillIcon src={techIcons.Express} alt="Express" />
 				</SkillIcons>
 				<TimelineSection>
 					<TimelineColumn>
