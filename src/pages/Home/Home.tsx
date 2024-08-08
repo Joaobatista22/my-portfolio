@@ -1,4 +1,3 @@
-import type React from "react";
 import { useEffect, useState } from "react";
 import LogoImg from "../../assets/perfil_image.png";
 import {
@@ -62,7 +61,7 @@ const Home: React.FC = () => {
 				<Description>
 					Sou um apaixonado por tecnologia e estou em transição de carreira para
 					a area de desenvolvimento web, tenho dedicado meu tempo ao estudo e
-					prática de progetos. Possuo especialização em tecnologias front-end e
+					prática de projetos. Possuo especialização em tecnologias front-end e
 					back-end, com foco em React.JS e Node.JS. Estou sempre buscando
 					aprender e implementar as melhores práticas no desenvolvimento web
 					para criar experiências de usuário excepcionais.

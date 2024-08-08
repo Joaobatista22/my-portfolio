@@ -1,5 +1,4 @@
 import Card from "../../components/Card/Card";
-
 import { ContactHeader, ContactTitle } from "../Contact/Contact.styles";
 import { ProjectContainer } from "./Projects.styles";
 

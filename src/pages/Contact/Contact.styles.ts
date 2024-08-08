@@ -23,7 +23,6 @@ export const ContactHeader = styled.div`
   position: relative;
   margin: 2rem;
   flex-direction: column;
- 
 `;
 
 export const ContactTitle = styled.h1`

@@ -122,7 +122,7 @@ export const TimelineItem = styled.div`
   &::before {
     content: '';
     position: absolute;
-    left: -6px; // Posiciona o círculo sobre a linha
+    left: -6px;
     top: 5px;
     width: 10px;
     height: 10px;

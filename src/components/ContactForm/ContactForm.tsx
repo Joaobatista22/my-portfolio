@@ -2,22 +2,17 @@ import emailjs from "emailjs-com";
 import type React from "react";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { Button, Form, Input, TextArea } from "./ContactForm.styles";
 
 const isValidEmail = (email: string): boolean => {
-	// Expressão regular mais robusta para validação de email
 	const emailRegex =
 		/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 	if (!emailRegex.test(email)) {
 		return false;
 	}
-
-	// Verificar domínio do email
 	const [, domain] = email.split("@");
-	const validDomains = ["gmail.com", "hotmail.com", "yahoo.com", "outlook.com"]; // Adicione outros domínios conforme necessário
-
+	const validDomains = ["gmail.com", "hotmail.com", "yahoo.com", "outlook.com"];
 	if (!validDomains.includes(domain.toLowerCase())) {
 		return false;
 	}

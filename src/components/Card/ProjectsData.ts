@@ -37,7 +37,6 @@ export const projects: Project[] = [
 			"PostreSQL",
 			"Styled",
 			"JavaScript",
-			"Express",
 			"Restfull",
 			"Git",
 		],

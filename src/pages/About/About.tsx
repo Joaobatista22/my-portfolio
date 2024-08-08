@@ -1,4 +1,3 @@
-import type React from "react";
 import { techIcons } from "../../components/Card/techIcons";
 import { useIsLoaded } from "../../contexts/IsLoadedContext";
 import { ContactHeader, ContactTitle } from "../Contact/Contact.styles";
