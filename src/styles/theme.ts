@@ -15,7 +15,7 @@ export const darkTheme: DefaultTheme = {
 	textColor: "#FAFAFA",
 	primaryColor: "#ff9f43",
 	bthov: "#FF5E00",
-	secondaryColor: "#001E2B",
+	secondaryColor: "#011429",
 	clinColor: "#F1F1F1",
 	shadowColor: "rgba(255, 255, 255, 0.1)",
 };

@@ -55,20 +55,21 @@ const Home: React.FC = () => {
 	return (
 		<HeroSection $isLoaded={isLoaded}>
 			<HeroContent $isLoaded={isLoaded}>
-				<Div>Hello I'm</Div>
+				<Div>Olá eu sou</Div>
 				<Title>João Batista</Title>
 				<SubTitle className="typing">{currentTitle}</SubTitle>
 				<Description>
-					Sou um apaixonado por tecnologia e estou em transição de carreira para
-					a area de desenvolvimento web, tenho dedicado meu tempo ao estudo e
-					prática de projetos. Possuo especialização em tecnologias front-end e
-					back-end, com foco em React.JS e Node.JS. Estou sempre buscando
-					aprender e implementar as melhores práticas no desenvolvimento web
-					para criar experiências de usuário excepcionais.
+					Sou um desenvolvedor front-end especializado em React, Next.js,
+					TypeScript e SCSS, com experiência em criar interfaces modernas e
+					responsivas. Utilizo Vite.js para otimização de projetos e Styled
+					Components para manter um estilo consistente. Também tenho experiência
+					com Node.js, onde desenvolvo APIs RESTful utilizando TypeScript, e
+					utilizo o Insomnia para testar e depurar essas APIs, garantindo alta
+					performance e escalabilidade.
 				</Description>
 				<ButtonContainer>
-					<PrimaryButton to="/contact">Say hello</PrimaryButton>
-					<SecondaryButton to="/projects">See my work</SecondaryButton>
+					<PrimaryButton to="/contact">Diga Olá!</PrimaryButton>
+					<SecondaryButton to="/projects">Meus Projetos</SecondaryButton>
 				</ButtonContainer>
 			</HeroContent>
 			<HeroVisual>

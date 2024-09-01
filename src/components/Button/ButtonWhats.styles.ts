@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ThemeToggle = styled.button`
+export const WhatsButton = styled.button`
     background-color: ${(props) => props.theme.secondaryColor};
     border: none;
     border-radius: 50%;
@@ -9,7 +9,7 @@ export const ThemeToggle = styled.button`
     cursor: pointer;
     position: absolute;
     right: 2rem;
-    top: 2rem;
+    top: 5rem;
   animation: aTwsK 3s ease-in-out infinite;
   filter: drop-shadow(1px 1px 2px ${(props) => props.theme.shadowColor});
 
@@ -18,6 +18,6 @@ export const ThemeToggle = styled.button`
   }
   @media (max-width: 768px) {
     font-size: 32px;
-    top: 4rem;
+    top: 7rem;
   }
 `;

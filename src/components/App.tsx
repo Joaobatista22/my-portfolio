@@ -6,6 +6,8 @@ import { IsLoadedProvider } from "../contexts/IsLoadedContext";
 import { ThemeProvider } from "../contexts/ThemeContext";
 import AppRoutes from "../routes/AppRoutes";
 import GlobalStyle from "../styles/global";
+import ButtonWhatsapp from "./Button/ButtonWhats";
+import Footer from "./Footer/footer";
 
 const App: React.FC = () => {
 	return (
@@ -15,7 +17,8 @@ const App: React.FC = () => {
 				<Router>
 					<Header />
 					<ThemeToggleButton />
-					<AppRoutes />
+					<ButtonWhatsapp />
+					<AppRoutes /> <Footer />
 				</Router>
 			</IsLoadedProvider>
 		</ThemeProvider>
