@@ -2,6 +2,7 @@ import emailjs from "emailjs-com";
 import type React from "react";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { Button, Form, Input, TextArea } from "./ContactForm.styles";
 
 const isValidEmail = (email: string): boolean => {
