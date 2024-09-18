@@ -78,6 +78,9 @@ export const CardDescription = styled.p`
   text-align: center;
   margin-bottom: 1rem;
   line-height: 1.66;
+  @media (max-width: 768px) {
+    font-size: 0.675rem;
+  }
 `;
 
 export const LinkContainer = styled.div`

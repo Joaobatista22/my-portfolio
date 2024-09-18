@@ -19,7 +19,7 @@ export const WhatsButton = styled.button`
   @media (max-width: 768px) {
     font-size: 32px;
     top: 7rem;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
   }
 `;
