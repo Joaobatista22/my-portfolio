@@ -16,7 +16,6 @@ import {
 } from "./Card.styles";
 import { type Project, projects } from "./ProjectsData";
 import { techIcons } from "./techIcons";
-import React from "react";
 
 const ProjectCard: FC<Project> = ({
 	title,
