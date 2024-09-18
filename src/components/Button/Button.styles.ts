@@ -4,12 +4,12 @@ export const ThemeToggle = styled.button`
     background-color: ${(props) => props.theme.secondaryColor};
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
     position: absolute;
     right: 2rem;
-    top: 2rem;
+    top: 3rem;
   animation: aTwsK 3s ease-in-out infinite;
   filter: drop-shadow(1px 1px 2px ${(props) => props.theme.shadowColor});
 

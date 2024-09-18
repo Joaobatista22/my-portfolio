@@ -7,7 +7,7 @@ const ButtonWhatsapp = () => {
 	return (
 		<WhatsButton>
 			<a href={whatsappLink} target="_blank" rel="noopener noreferrer">
-				<IoLogoWhatsapp style={{ color: "#25D366", fontSize: "1.5rem" }} />
+				<IoLogoWhatsapp style={{ color: "#25D366", fontSize: "1.7rem" }} />
 			</a>
 		</WhatsButton>
 	);

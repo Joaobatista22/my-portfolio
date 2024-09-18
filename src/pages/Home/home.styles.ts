@@ -150,6 +150,7 @@ export const PrimaryButton = styled(Link)`
   align-items: center;
   border-radius: 21px;
   font-weight: bold;
+  font-size: 1.3rem;
   justify-content: center;
   background-color: ${(props) => props.theme.primaryColor};
   color: ${(props) => props.theme.secondaryColor};
